@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TGFC Card</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { width: 1080px; height: 1080px; overflow: hidden; background: #0d1f35; }
@@ -26,28 +25,16 @@
     padding: 10px 22px 10px 14px;
   }
   .logo-img { width: 36px; height: 36px; object-fit: contain; }
-  .logo-text { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; line-height: 1.25; text-transform: uppercase; }
+  .logo-text { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; line-height: 1.25; text-transform: uppercase; }
 
-  /* Stack from bottom up — each element at a fixed bottom value */
-  /* URL: 44px from bottom ~20px tall */
-  .url-row { position: absolute; bottom: 44px; left: 48px; right: 48px; display: flex; align-items: center; justify-content: space-between; }
-  .url { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.40); letter-spacing: 1.5px; text-transform: uppercase; }
-  .corner-accent { width: 32px; height: 32px; border-right: 2px solid rgba(211,100,128,0.45); border-bottom: 2px solid rgba(211,100,128,0.45); }
-
-  /* State: 44 + 20 + 16gap = 80px from bottom, ~22px tall */
-  .state-name { position: absolute; bottom: 80px; left: 48px; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.65); letter-spacing: 3px; text-transform: uppercase; }
-
-  /* City: 80 + 22 + 12gap = 114px from bottom, 86px * 0.92 = ~80px tall */
-  .city-name { position: absolute; bottom: 114px; left: 48px; font-family: 'Playfair Display', Georgia, serif; font-size: 86px; font-weight: 900; color: #ffffff; line-height: 0.92; letter-spacing: -1px; text-shadow: 0 4px 24px rgba(0,0,0,0.4); }
-
-  /* Label: 114 + 80 + 12gap = 206px from bottom, ~20px tall */
-  .location-label { position: absolute; bottom: 206px; left: 48px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; color: #D36480; letter-spacing: 4px; text-transform: uppercase; }
-
-  /* Divider: 206 + 20 + 14gap = 240px from bottom, 2px tall */
+  .tagline { position: absolute; bottom: 258px; left: 48px; right: 48px; font-family: Georgia, 'Times New Roman', serif; font-size: 22px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.85); line-height: 1.4; max-width: 600px; }
   .divider { position: absolute; bottom: 240px; left: 48px; width: 40px; height: 2px; background: #D36480; border-radius: 2px; }
-
-  /* Tagline: 240 + 2 + 16gap = 258px from bottom, ~60px tall (2 lines at 22px * 1.4) */
-  .tagline { position: absolute; bottom: 258px; left: 48px; right: 48px; font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.85); line-height: 1.4; max-width: 600px; }
+  .location-label { position: absolute; bottom: 206px; left: 48px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 700; color: #D36480; letter-spacing: 4px; text-transform: uppercase; }
+  .city-name { position: absolute; bottom: 114px; left: 48px; font-family: Georgia, 'Times New Roman', serif; font-size: 86px; font-weight: 900; color: #ffffff; line-height: 0.92; letter-spacing: -1px; text-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+  .state-name { position: absolute; bottom: 80px; left: 48px; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.65); letter-spacing: 3px; text-transform: uppercase; }
+  .url-row { position: absolute; bottom: 44px; left: 48px; right: 48px; display: flex; align-items: center; justify-content: space-between; }
+  .url { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.40); letter-spacing: 1.5px; text-transform: uppercase; }
+  .corner-accent { width: 32px; height: 32px; border-right: 2px solid rgba(211,100,128,0.45); border-bottom: 2px solid rgba(211,100,128,0.45); }
 </style>
 </head>
 <body>
