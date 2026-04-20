@@ -28,20 +28,59 @@
   .logo-img { width: 36px; height: 36px; object-fit: contain; }
   .logo-text { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; line-height: 1.25; text-transform: uppercase; }
 
-  .bottom-block {
+  /* URL pinned to very bottom */
+  .url-row {
     position: absolute;
-    bottom: 48px;
+    bottom: 44px;
     left: 48px;
     right: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .tagline { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.85); line-height: 1.4; max-width: 600px; margin-bottom: 18px; }
-  .divider { width: 40px; height: 2px; background: #D36480; margin-bottom: 18px; border-radius: 2px; }
-  .location-label { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; color: #D36480; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 6px; }
-  .city-name { font-family: 'Playfair Display', Georgia, serif; font-size: 86px; font-weight: 900; color: #ffffff; line-height: 0.92; letter-spacing: -1px; text-shadow: 0 4px 24px rgba(0,0,0,0.4); margin-bottom: 10px; }
-  .state-name { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.65); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
-  .footer-row { display: flex; align-items: center; justify-content: space-between; }
   .url { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.40); letter-spacing: 1.5px; text-transform: uppercase; }
   .corner-accent { width: 32px; height: 32px; border-right: 2px solid rgba(211,100,128,0.45); border-bottom: 2px solid rgba(211,100,128,0.45); }
+
+  /* State pinned above URL */
+  .state-name {
+    position: absolute;
+    bottom: 100px;
+    left: 48px;
+    font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.65); letter-spacing: 3px; text-transform: uppercase;
+  }
+
+  /* City pinned above state */
+  .city-name {
+    position: absolute;
+    bottom: 130px;
+    left: 48px;
+    font-family: 'Playfair Display', Georgia, serif; font-size: 86px; font-weight: 900; color: #ffffff; line-height: 0.92; letter-spacing: -1px; text-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+
+  /* Label pinned above city */
+  .location-label {
+    position: absolute;
+    bottom: 310px;
+    left: 48px;
+    font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; color: #D36480; letter-spacing: 4px; text-transform: uppercase;
+  }
+
+  /* Divider above label */
+  .divider {
+    position: absolute;
+    bottom: 338px;
+    left: 48px;
+    width: 40px; height: 2px; background: #D36480; border-radius: 2px;
+  }
+
+  /* Tagline above divider */
+  .tagline {
+    position: absolute;
+    bottom: 380px;
+    left: 48px;
+    right: 48px;
+    font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.85); line-height: 1.4; max-width: 600px;
+  }
 </style>
 </head>
 <body>
@@ -55,16 +94,14 @@
     <div class="logo-text">Greetings<br>From Co</div>
   </div>
 
-  <div class="bottom-block">
-    <div class="tagline" id="tagline">Where the music never stops and the memories last forever.</div>
-    <div class="divider"></div>
-    <div class="location-label" id="label">Greetings from</div>
-    <div class="city-name" id="city">Nashville</div>
-    <div class="state-name" id="state">Tennessee, USA</div>
-    <div class="footer-row">
-      <div class="url">thegreetingsfromco.com</div>
-      <div class="corner-accent"></div>
-    </div>
+  <div class="tagline" id="tagline">Where the music never stops and the memories last forever.</div>
+  <div class="divider"></div>
+  <div class="location-label" id="label">Greetings from</div>
+  <div class="city-name" id="city">Nashville</div>
+  <div class="state-name" id="state">Tennessee, USA</div>
+  <div class="url-row">
+    <div class="url">thegreetingsfromco.com</div>
+    <div class="corner-accent"></div>
   </div>
 </div>
 
