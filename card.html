@@ -10,7 +10,7 @@
   body { width: 1080px; height: 1080px; overflow: hidden; background: #0d1f35; }
   .card { position: relative; width: 1080px; height: 1080px; overflow: hidden; }
   .photo { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; }
-  .overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.04) 35%, rgba(0,0,0,0.45) 65%, rgba(0,0,0,0.80) 100%); }
+  .overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.04) 35%, rgba(0,0,0,0.50) 60%, rgba(0,0,0,0.85) 100%); }
   .overlay-left { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.25) 0%, transparent 55%); }
 
   .logo-badge {
@@ -28,59 +28,26 @@
   .logo-img { width: 36px; height: 36px; object-fit: contain; }
   .logo-text { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; line-height: 1.25; text-transform: uppercase; }
 
-  /* URL pinned to very bottom */
-  .url-row {
-    position: absolute;
-    bottom: 44px;
-    left: 48px;
-    right: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  /* Stack from bottom up — each element at a fixed bottom value */
+  /* URL: 44px from bottom ~20px tall */
+  .url-row { position: absolute; bottom: 44px; left: 48px; right: 48px; display: flex; align-items: center; justify-content: space-between; }
   .url { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.40); letter-spacing: 1.5px; text-transform: uppercase; }
   .corner-accent { width: 32px; height: 32px; border-right: 2px solid rgba(211,100,128,0.45); border-bottom: 2px solid rgba(211,100,128,0.45); }
 
-  /* State pinned above URL */
-  .state-name {
-    position: absolute;
-    bottom: 100px;
-    left: 48px;
-    font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.65); letter-spacing: 3px; text-transform: uppercase;
-  }
+  /* State: 44 + 20 + 16gap = 80px from bottom, ~22px tall */
+  .state-name { position: absolute; bottom: 80px; left: 48px; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.65); letter-spacing: 3px; text-transform: uppercase; }
 
-  /* City pinned above state */
-  .city-name {
-    position: absolute;
-    bottom: 130px;
-    left: 48px;
-    font-family: 'Playfair Display', Georgia, serif; font-size: 86px; font-weight: 900; color: #ffffff; line-height: 0.92; letter-spacing: -1px; text-shadow: 0 4px 24px rgba(0,0,0,0.4);
-  }
+  /* City: 80 + 22 + 12gap = 114px from bottom, 86px * 0.92 = ~80px tall */
+  .city-name { position: absolute; bottom: 114px; left: 48px; font-family: 'Playfair Display', Georgia, serif; font-size: 86px; font-weight: 900; color: #ffffff; line-height: 0.92; letter-spacing: -1px; text-shadow: 0 4px 24px rgba(0,0,0,0.4); }
 
-  /* Label pinned above city */
-  .location-label {
-    position: absolute;
-    bottom: 310px;
-    left: 48px;
-    font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; color: #D36480; letter-spacing: 4px; text-transform: uppercase;
-  }
+  /* Label: 114 + 80 + 12gap = 206px from bottom, ~20px tall */
+  .location-label { position: absolute; bottom: 206px; left: 48px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; color: #D36480; letter-spacing: 4px; text-transform: uppercase; }
 
-  /* Divider above label */
-  .divider {
-    position: absolute;
-    bottom: 338px;
-    left: 48px;
-    width: 40px; height: 2px; background: #D36480; border-radius: 2px;
-  }
+  /* Divider: 206 + 20 + 14gap = 240px from bottom, 2px tall */
+  .divider { position: absolute; bottom: 240px; left: 48px; width: 40px; height: 2px; background: #D36480; border-radius: 2px; }
 
-  /* Tagline above divider */
-  .tagline {
-    position: absolute;
-    bottom: 380px;
-    left: 48px;
-    right: 48px;
-    font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.85); line-height: 1.4; max-width: 600px;
-  }
+  /* Tagline: 240 + 2 + 16gap = 258px from bottom, ~60px tall (2 lines at 22px * 1.4) */
+  .tagline { position: absolute; bottom: 258px; left: 48px; right: 48px; font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.85); line-height: 1.4; max-width: 600px; }
 </style>
 </head>
 <body>
