@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TGFC Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: #0d1f35;
+  }
+
+  .card {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+  }
+
+  .photo {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: none;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.08) 0%,
+        rgba(0,0,0,0.04) 35%,
+        rgba(0,0,0,0.38) 65%,
+        rgba(0,0,0,0.72) 100%
+      );
+  }
+
+  .overlay-left {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.30) 0%,
+      transparent 55%
+    );
+  }
+
+  .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 52px 56px;
+  }
+
+  .top-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .logo-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 60px;
+    padding: 10px 22px 10px 14px;
+    backdrop-filter: blur(6px);
+  }
+
+  .logo-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+
+  .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .location-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #D36480;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .city-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 96px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    margin-bottom: 10px;
+  }
+
+  .state-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.70);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: #D36480;
+    margin-bottom: 20px;
+    border-radius: 2px;
+  }
+
+  .tagline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.4;
+    max-width: 520px;
+    margin-bottom: 28px;
+  }
+
+  .footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .url {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .corner-accent {
+    width: 40px;
+    height: 40px;
+    border-right: 2px solid rgba(211,100,128,0.5);
+    border-bottom: 2px solid rgba(211,100,128,0.5);
+    border-radius: 0 0 4px 0;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="photo" id="photo"></div>
+  <div class="overlay"></div>
+  <div class="overlay-left"></div>
+  <div class="content">
+    <div class="top-row">
+      <div class="logo-badge">
+        <img class="logo-img" src="https://cdn.shopify.com/s/files/1/0063/1010/1080/files/greetings_from_co.jpg?v=1712064048" alt="TGFC logo" id="logo-img">
+        <div class="logo-text">Greetings<br>From Co</div>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <div class="location-label" id="label">Greetings from</div>
+      <div class="city-name" id="city">Nashville</div>
+      <div class="state-name" id="state">Tennessee, USA</div>
+      <div class="divider"></div>
+      <div class="tagline" id="tagline">Where the music never stops and the memories last forever.</div>
+      <div class="footer-row">
+        <div class="url">thegreetingsfromco.com</div>
+        <div class="corner-accent"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const city = params.get('city') || 'Nashville';
+  const state = params.get('state') || 'Tennessee, USA';
+  const label = params.get('label') || 'Greetings from';
+  const tagline = params.get('tagline') || 'Where the music never stops and the memories last forever.';
+  const photoUrl = params.get('photo_url') || '';
+
+  document.getElementById('city').textContent = city;
+  document.getElementById('state').textContent = state + ', USA';
+  document.getElementById('label').textContent = label;
+  document.getElementById('tagline').textContent = tagline;
+
+  if (photoUrl) {
+    document.getElementById('photo').style.backgroundImage = `url('${decodeURIComponent(photoUrl)}')`;
+  } else {
+    document.getElementById('photo').style.background = 'linear-gradient(160deg, #1a3a5c 0%, #2b6cb0 40%, #7c3d52 80%, #1a1a2e 100%)';
+  }
+
+  // Logo fallback — if jpg doesn't render well, swap to white SVG pin
+  const logoImg = document.getElementById('logo-img');
+  logoImg.onerror = function() {
+    this.style.display = 'none';
+  };
+</script>
+</body>
+</html>
